@@ -328,7 +328,7 @@ sub Reconfig {
 	foreach my $source ( sort keys %NfConf::sources ) {
 		$$NfSen::hints{'sources'}{$source} = $NfConf::sources{$source}{'port'};
 	}
-
+	NfSen::StoreHints();
 	NfSenRC::NfSen_reload();
 
 } # End of Reconfig

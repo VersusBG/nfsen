@@ -128,7 +128,7 @@ function CompileCommand($mode) {
 		// IPv6 long listing
 		$args .= $process_form['IPv6_long'] == 'checked' ? " -6" : '';
 		// sort the flows from all sources
-		$args .= $process_form['timesorted'] == 'checked' ? " -m" : '';
+		$args .= $process_form['timesorted'] == 'checked' ? " -Otstart" : '';
 		// list this number of flows
 		$args .= " -c " . $ListNOption[$process_form['listN']];
 	}
